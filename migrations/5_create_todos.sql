@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS todos (
+  userId NOT NULL,
+  id INTEGER PRIMARY KEY,
+  title TEXT NOT NULL UNIQUE,
+  completed BOOLEAN,
+  FOREIGN KEY (userId) REFERENCES users(userId)
+);
